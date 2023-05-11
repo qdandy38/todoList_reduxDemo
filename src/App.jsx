@@ -1,11 +1,22 @@
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom'
-import Main from '@/views/Main'
+import routes from "@/router"
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<Main />} />
-    </Routes>
+    <Suspense fallback={<div></div>}>
+      <Routes>
+        {routes.map((route, i) => {
+          return (
+            <Route
+              key={i}
+              path={route.path}
+              element={<route.element />} 
+            />
+          )
+        })}
+      </Routes>
+    </Suspense>
   );
 }
 
