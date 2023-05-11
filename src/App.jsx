@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import Main from './views/Main'
+import Main from '@/views/Main'
 
 const App = () => {
   return (

@@ -38,7 +38,7 @@
 }
 
 .testClass{
-  @mainly
+  @apply
   text-3xl
   font-bold
   text-red-400;
