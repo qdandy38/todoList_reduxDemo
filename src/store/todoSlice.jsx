@@ -8,11 +8,12 @@ const todoSlice = createSlice({
   name: 'todo',
   initialState: initState,
   reducers: {
-    addTodo(state, item) {
-      state.todoList.push(item);
+    addTodo: (state, { payload }) => {
+      state.todoList.push(payload);
+
     },
-    delTodo(state, index) {
-      state.todoList.splice(index, 1);
+    delTodo: (state, { payload }) => {
+      state.todoList.splice(payload, 1);
     }
   }
 })
